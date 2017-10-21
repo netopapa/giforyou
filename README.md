@@ -1,5 +1,7 @@
 # Gifforyou
 
+Sistema de pesquisa de filtros por palavras-chaves. O Giforyou foi projeto com o intuito de testar conhecimentos em Angular 2, lógica de programação e desenvolvimento WEB. Aprecie com moderação..
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.7.
 
 ## Development server
