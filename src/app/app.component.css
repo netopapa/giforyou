@@ -1,0 +1,18 @@
+header{
+    background-color: #000000;
+    border-bottom: 1px solid #ffffff;
+    height: 100px;
+}
+
+header a h1::first-letter{
+    font-size: 200%;
+}
+
+header a h1{
+    transition: .2s linear;
+}
+
+header a h1:hover{
+    transform: scale(1.08);
+}
+
