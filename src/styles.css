@@ -20,6 +20,11 @@ button{
     cursor: pointer;
 }
 
+section{
+    width: 750px;
+    margin: 0 auto;
+}
+
 /* helpers */
 .white-text{
     color: #ffffff;
@@ -36,32 +41,38 @@ button{
 }
 
 /* formulário de pesquisa */
-form.search{
+div.search{
     display: block;
-    margin: 0 auto;
+    margin: 20px auto;
     width: 310px;
     height: 30px;
 }
 
-form.search div{
+div.search div{
     height: 100%;
     display: flex;
 }
 
-form.search div > *{
+div.search div > *{
     background-color: #ffffff;
 }
 
-form.search input{
+div.search input{
     padding: 5px;
     font-weight: 700;
     width: 280px;
     font-size: 1.18rem;
 }
 
-form.search button{
+div.search button{
     border: none;
     padding: 0 10px;
+    transition: .2s linear;
+}
+
+div.search button:hover{
+    background-color: #1f1f1f;
+    color: #ffffff;
 }
 
 /*FLEXBOX GRID*/
