@@ -12,6 +12,14 @@ a{
     text-decoration: none;
 }
 
+button, input{
+    outline: 0;
+}
+
+button{
+    cursor: pointer;
+}
+
 /* helpers */
 .white-text{
     color: #ffffff;
@@ -25,6 +33,35 @@ a{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* formulário de pesquisa */
+form.search{
+    display: block;
+    margin: 0 auto;
+    width: 310px;
+    height: 30px;
+}
+
+form.search div{
+    height: 100%;
+    display: flex;
+}
+
+form.search div > *{
+    background-color: #ffffff;
+}
+
+form.search input{
+    padding: 5px;
+    font-weight: 700;
+    width: 280px;
+    font-size: 1.18rem;
+}
+
+form.search button{
+    border: none;
+    padding: 0 10px;
 }
 
 /*FLEXBOX GRID*/
