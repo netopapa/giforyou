@@ -26,6 +26,10 @@ section{
 }
 
 /* helpers */
+.totalv{
+    height: 100%;
+}
+
 .white-text{
     color: #ffffff;
 }

@@ -13,22 +13,28 @@
   <!-- categoria animal -->
   <div class="row">
     <h3>Happy</h3>
-    <div class="col-sm-12 col-lg-4 item">
-      <!-- <img src="" alt=""> -->
+    <div class="col-sm-12 col-lg-4 item" *ngFor="let gif of happyGifs">
+      <div class="centralizado totalv">
+        <img src="{{gif.images.fixed_width.url}}" alt="{{gif.title}}">
+      </div>
     </div>
   </div>
 
   <div class="row">
     <h3>Angry</h3>
-    <div class="col-sm-12 col-lg-4 item">
-      <!-- <img src="" alt=""> -->
+    <div class="col-sm-12 col-lg-4 item" *ngFor="let gif of angryGifs">
+      <div class="centralizado totalv">
+        <img src="{{gif.images.fixed_width.url}}" alt="{{gif.title}}">
+      </div>
     </div>
   </div>
   
-    <div class="row">
-      <h3>melancholy</h3>
-      <div class="col-sm-12 col-lg-4 item">
-        <!-- <img src="" alt=""> -->
-      </div>
-    </div>    
+  <div class="row">
+    <h3>melancholy</h3>
+    <div class="col-sm-12 col-lg-4 item" *ngFor="let gif of melancholyGifs">
+      <div class="centralizado totalv">
+        <img src="{{gif.images.fixed_width.url}}" alt="{{gif.title}}">
+        </div>
+    </div>
+  </div>    
 </section>
