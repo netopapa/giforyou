@@ -14,8 +14,8 @@ export class GifApiService {
 
   constructor(private http: Http) { }
 
-  lookForMe(query:string, limite:number){
-    let fullUrl: string = `${this.url}q=${query}&api_key=${this.key}&limit=${limite}`; 
+  lookForMe(query:string, limite:number, offset = 0){
+    let fullUrl: string = `${this.url}q=${query}&api_key=${this.key}&limit=${limite}&offset=${offset}`; 
     return this.http.get(fullUrl).map(
       (response) => {return response.json()}
   );

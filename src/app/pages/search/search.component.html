@@ -1,22 +1,24 @@
 <!-- search page -->
 <section>
   <!-- parametros da pesquisa -->
-  <h2 class="white-text center"></h2>
+  <h2 class="white-text center">{{pesquisaAtual}}</h2>
   <!-- formulário de pesquisa -->
   <div class="search">
     <div>
-        <input type="text" placeholder="Try it">
-        <button><i class="fa fa-search"></i></button>
+        <input type="text" placeholder="Try it" [(ngModel)]="pesquisa">
+        <button (click)="pesquisar()" ><i class="fa fa-search"></i></button>
     </div>
   </div>
 
   <!-- lista de gifs da pesquisa atual -->
   <div class="row">
-    <div class="col-sm-12 col-lg-4">
-      <!-- <img src="" alt=""> -->
+    <div class="col-sm-12 col-lg-4" *ngFor="let gif of gifs">
+      <div class="centralizado totalv">
+        <img src="{{gif.images.fixed_width.url}}" alt="{{gif.title}}">
+      </div>
     </div>
   </div>
 
-  <!-- páginação -->
-  <!-- nao sei ainda como vai ser -->
+  <button class="uppercase more" (click)="more()">See more</button>
+
 </section>

@@ -15,6 +15,8 @@ export class HomeComponent implements OnInit {
   public melancholyGifs: object = {};
   public angryGifs: object = {};
 
+  public pesquisa: string;
+
   ngOnInit() {
     //busca por 'happy'
     this.gifService.lookForMe('happy', 6)

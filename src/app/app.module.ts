@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http'
+import {FormsModule} from '@angular/forms'
 
 import { RoutingModule } from './app.router'
 import { AppComponent } from './app.component';
@@ -18,7 +19,8 @@ import { GifApiService } from './gif-api.service';
   imports: [
     BrowserModule,
     RoutingModule,
-    HttpModule
+    HttpModule,
+    FormsModule
   ],
   providers: [GifApiService],
   bootstrap: [AppComponent]

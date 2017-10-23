@@ -25,6 +25,10 @@ section{
     margin: 0 auto;
 }
 
+.item{
+    margin: 5px 0;
+}
+
 /* helpers */
 .totalv{
     height: 100%;
@@ -77,6 +81,13 @@ div.search button{
 div.search button:hover{
     background-color: #1f1f1f;
     color: #ffffff;
+}
+
+/* responsivo? */
+@media only screen and (max-width: 560px){
+    section{
+        width: 100%;
+    }
 }
 
 /*FLEXBOX GRID*/

@@ -5,23 +5,24 @@
 
   <div class="search">
     <div>
-        <input type="text" placeholder="Try it">
-        <button><i class="fa fa-search"></i></button>
+        <input type="text" placeholder="Try it" [(ngModel)]="pesquisa">
+        <button [routerLink]="['/search']" [queryParams]="{p: pesquisa}"><i class="fa fa-search"></i></button>
     </div>
   </div>
 
-  <!-- categoria animal -->
+  <!-- categoria happy -->
   <div class="row">
-    <h3>Happy</h3>
+    <h3 class="center" [routerLink]="['/search']" [queryParams]="{p: 'happy'}">Happy</h3>
     <div class="col-sm-12 col-lg-4 item" *ngFor="let gif of happyGifs">
       <div class="centralizado totalv">
         <img src="{{gif.images.fixed_width.url}}" alt="{{gif.title}}">
       </div>
     </div>
   </div>
-
+  
+  <!-- categoria angry -->
   <div class="row">
-    <h3>Angry</h3>
+    <h3 class="center" [routerLink]="['/search']" [queryParams]="{p: 'Angry'}">Angry</h3>
     <div class="col-sm-12 col-lg-4 item" *ngFor="let gif of angryGifs">
       <div class="centralizado totalv">
         <img src="{{gif.images.fixed_width.url}}" alt="{{gif.title}}">
@@ -29,8 +30,9 @@
     </div>
   </div>
   
+  <!-- categoria melancholy -->
   <div class="row">
-    <h3>melancholy</h3>
+    <h3 class="center" [routerLink]="['/search']" [queryParams]="{p: 'melancholy'}">Melancholy</h3>
     <div class="col-sm-12 col-lg-4 item" *ngFor="let gif of melancholyGifs">
       <div class="centralizado totalv">
         <img src="{{gif.images.fixed_width.url}}" alt="{{gif.title}}">

@@ -1,15 +1,17 @@
 h2{
     background-color: #000000;
+    font-size: 1.5rem;
 }
 
 h3{
-    background-color: #ffffff;
+    background-color: #ffffffb8;
     width: 100%;
     margin: 5px auto;
     padding: 2px 10px;
     border-radius: 8px;
+    cursor: pointer;
 }
 
-.item{
-    margin: 5px 0;
+h3:hover{
+    text-decoration: underline;
 }
