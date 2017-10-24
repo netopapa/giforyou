@@ -44,9 +44,7 @@ export class SearchComponent implements OnInit {
     this.qntd += 12;
     this.gifService.lookForMe(this.pesquisaAtual, 12, this.qntd)
     .subscribe(res => {
-      for(let i:number = 0; i< 12; i++){
-        this.gifs.push(res['data'][i]);
-      }
+      this.gifs = this.gifs.concat(res['data']);
     });
   }
 
