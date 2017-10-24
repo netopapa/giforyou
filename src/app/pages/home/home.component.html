@@ -38,5 +38,25 @@
         <img src="{{gif.images.fixed_width.url}}" alt="{{gif.title}}">
         </div>
     </div>
-  </div>    
+  </div>
+  
+  <!-- categoria fail -->
+  <div class="row">
+    <h3 class="center" [routerLink]="['/search']" [queryParams]="{p: 'fail'}">fail</h3>
+    <div class="col-sm-12 col-lg-4 item" *ngFor="let gif of failGifs">
+      <div class="centralizado totalv">
+        <img src="{{gif.images.fixed_width.url}}" alt="{{gif.title}}">
+        </div>
+    </div>
+  </div> 
+
+  <!-- categoria awesome -->
+  <div class="row">
+    <h3 class="center" [routerLink]="['/search']" [queryParams]="{p: 'awesome'}">awesome</h3>
+    <div class="col-sm-12 col-lg-4 item" *ngFor="let gif of awesomeGifs">
+      <div class="centralizado totalv">
+        <img src="{{gif.images.fixed_width.url}}" alt="{{gif.title}}">
+        </div>
+    </div>
+  </div> 
 </section>
