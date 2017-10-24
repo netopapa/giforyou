@@ -15,20 +15,3 @@ header a h1{
 header a h1:hover{
     transform: scale(1.08);
 }
-
-footer{
-    background-color: #000000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px;
-    border-top: 1px solid #ffffff;
-    margin-top: 20px;
-}
-
-footer a{
-    font-size: 1rem;
-    text-transform: capitalize;
-    font-weight: 700;
-}
-

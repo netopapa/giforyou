@@ -14,3 +14,14 @@ button.more:hover{
     color: #ffffff;
     background-color: #000000;
 }
+
+#loading{
+    display: block;
+    margin: 20px auto;
+    transition: .2s linear;
+    opacity: 0;
+}
+
+#loading.on{
+    opacity: 1;
+}

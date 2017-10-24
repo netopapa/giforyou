@@ -1,5 +1,5 @@
 <!-- search page -->
-<section>
+<section #content>
   <!-- parametros da pesquisa -->
   <h2 class="white-text center">{{pesquisaAtual}}</h2>
   <!-- formulário de pesquisa -->
@@ -19,6 +19,6 @@
     </div>
   </div>
 
-  <button class="uppercase more" (click)="more()">See more</button>
+  <i [class.on]="load" class="fa fa-spinner fa-pulse fa-3x fa-fw white-text" id="loading"></i>
 
 </section>

@@ -14,7 +14,7 @@ import { GifApiService } from './gif-api.service';
   declarations: [
     AppComponent,
     HomeComponent,
-    SearchComponent
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
