@@ -1,7 +1,7 @@
 <!-- homepage -->
 <section id="home">
 
-  <h2 class="white-text center">Lorem ipsum dolor sit amet um texto qualquer consectetur adipisicing elit. Excepturi, veritatis. Mollitia, sapiente.</h2>
+  <h2 class="white-text center">Pesquise por palavras-chaves ou escolha uma categoria para iniciar uma busca.</h2>
 
   <div class="search">
     <div>
@@ -42,7 +42,7 @@
   
   <!-- categoria fail -->
   <div class="row">
-    <h3 class="center" [routerLink]="['/search']" [queryParams]="{p: 'fail'}">fail</h3>
+    <h3 class="center" [routerLink]="['/search']" [queryParams]="{p: 'fail'}">Fail</h3>
     <div class="col-sm-12 col-lg-4 item" *ngFor="let gif of failGifs">
       <div class="centralizado totalv">
         <img src="{{gif.images.fixed_width.url}}" alt="{{gif.title}}">
@@ -52,7 +52,7 @@
 
   <!-- categoria awesome -->
   <div class="row">
-    <h3 class="center" [routerLink]="['/search']" [queryParams]="{p: 'awesome'}">awesome</h3>
+    <h3 class="center" [routerLink]="['/search']" [queryParams]="{p: 'awesome'}">Awesome</h3>
     <div class="col-sm-12 col-lg-4 item" *ngFor="let gif of awesomeGifs">
       <div class="centralizado totalv">
         <img src="{{gif.images.fixed_width.url}}" alt="{{gif.title}}">
