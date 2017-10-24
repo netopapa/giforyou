@@ -12,7 +12,7 @@ export class SearchComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private gifService: GifApiService) { }
 
-  public gifs: object = {};
+  public gifs: object[] = [];
   public pesquisaAtual: string = '';
   public pesquisa: string = '';
 
@@ -44,8 +44,11 @@ export class SearchComponent implements OnInit {
     this.qntd += 12;
     this.gifService.lookForMe(this.pesquisaAtual, 12, this.qntd)
     .subscribe(res => {
-      this.gifs = Object.assign(this.gifs, res['data']);
+      for(let i:number = 0; i< 12; i++){
+        this.gifs.push(res['data'][i]);
+      }
     });
   }
+
 
 }
