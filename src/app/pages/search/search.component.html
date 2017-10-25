@@ -19,6 +19,11 @@
     </div>
   </div>
 
+  <div id="vazio" *ngIf="empty">
+    <h5 class="white-text center">Sem resultados</h5>
+    <img src="https://media3.giphy.com/media/13d2jHlSlxklVe/giphy.gif" alt="empty">
+  </div>
+
   <i [class.on]="load" class="fa fa-spinner fa-pulse fa-3x fa-fw white-text" id="loading"></i>
 
 </section>

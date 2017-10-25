@@ -7,10 +7,8 @@ import {Subscription} from 'rxjs/Rx';
 @Injectable()
 export class GifApiService {
 
-  public key: string = 'Wuqc0hQCjUYZoNQAJfM7ceVZOQS0D140';
-  public url: string = 'http://api.giphy.com/v1/gifs/search?';
-
-  //http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=Wuqc0hQCjUYZoNQAJfM7ceVZOQS0D140&limit=5
+  private key: string = 'Wuqc0hQCjUYZoNQAJfM7ceVZOQS0D140';
+  public url: string = 'https://api.giphy.com/v1/gifs/search?';
 
   constructor(private http: Http) { }
 

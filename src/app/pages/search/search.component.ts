@@ -19,8 +19,6 @@ export class SearchComponent implements OnInit {
     let scroll = contentHeight - this.viewHeight;
     //se barra de rolagem perto do fim da página
     if(window.scrollY >= scroll){
-      //ativa loading
-      this.load = true;
       //faz nova requisição
       this.more();
     }
@@ -45,6 +43,8 @@ export class SearchComponent implements OnInit {
   public viewHeight: number;
   //ativador do loading
   public load: boolean = false;
+  //vazio?
+  public empty: boolean = false;
   
   ngOnInit() {
     //pega altura da página
@@ -56,10 +56,11 @@ export class SearchComponent implements OnInit {
         //faz requisição
         this.gifService.lookForMe(queryParams['p'], 12)
         .subscribe(res => {
-          if(res['data'].lenth > 0){
-            this.gifs = res['data'];
+          this.gifs = res['data'];
+          if(this.gifs.length < 1){
+            this.empty = true;
           }else{
-            this.gifs = [];
+            this.empty = false;
           }
         });
       }
@@ -73,17 +74,28 @@ export class SearchComponent implements OnInit {
     .subscribe(res => {
       this.gifs = res['data'];
       this.pesquisa = '';
+      if(this.gifs.length < 1){
+        this.empty = true;
+      }else{
+        this.empty = false;
+      }
     });
   }
 
   //pesquisa mais gifs da pesquisa atual
   more(){
-    this.qntd += 12;
-    this.gifService.lookForMe(this.pesquisaAtual, 12, this.qntd)
-    .subscribe(res => {
-      this.gifs = this.gifs.concat(res['data']);
-      setTimeout(()=>{this.load = false;}, 1500);
-    });
+    if(!this.empty){
+      //ativa loading
+      this.load = true;
+      //offset
+      this.qntd += 12;
+      //requisição
+      this.gifService.lookForMe(this.pesquisaAtual, 12, this.qntd)
+      .subscribe(res => {
+        this.gifs = this.gifs.concat(res['data']);
+        setTimeout(()=>{this.load = false;}, 1500);
+      });
+    }
   }
 
 }

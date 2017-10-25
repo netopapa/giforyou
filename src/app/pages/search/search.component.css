@@ -25,3 +25,7 @@ button.more:hover{
 #loading.on{
     opacity: 1;
 }
+
+#vazio img{
+    width: 100%;
+}
