@@ -12,7 +12,7 @@ export class SearchComponent implements OnInit {
   //section search page
   @ViewChild('content') content: ElementRef;
   //captura scroll
-  @HostListener('window:scroll', [this.gifs]) onFullScroll(){
+  @HostListener('window:scroll', []) onFullScroll(){
     //pega tamanho atual da section
     let contentHeight: number = this.content.nativeElement.offsetHeight;
     //pega altura atual do scroll
